@@ -1,0 +1,20 @@
+name: asp
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.7
+  - numpy
+  - scikit-learn
+  - scipy
+  - sympy
+  - pandas
+  - seaborn
+  - matplotlib
+  - pillow=5
+  - opencv=3
+  - jupyterlab
+  - keras
+  - pydot
+  - imagemagick
+

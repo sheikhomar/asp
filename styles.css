@@ -1,0 +1,54 @@
+.summary {
+  border: solid 1px green;
+  background: #cdffd8;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.insight {
+  border: solid 1px green;
+  background: #cdffd8;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.extra {
+  border: solid 1px green;
+  --background: #cdffd8;
+  padding: 10px;
+  border-radius: 2px;
+  padding-left: 80px;
+  background: #cdffd8 url(/files/figures/extra-info.png) no-repeat;
+  background-image: url(/files/figures/extra-info.png);
+  min-height: 60px;
+  background-position: 5px 5px; 
+}
+
+.warning {
+  border: solid 1px #8a6d3b;
+  background: #fcf8e3;
+  padding: 10px;
+  border-radius: 2px;
+}
+
+.green {
+  color: #006600;
+}
+
+.red {
+  color: #cc0000;
+}
+
+.simplex-tableaux {
+    font-size: 13pt;
+}
+
+.last-row td {
+    border-top: solid 1px Black;
+}
+
+.smallest-value {
+    background-color: Green;
+    color: White;
+    font-weight: bold;
+}
