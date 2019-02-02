@@ -1,5 +1,6 @@
 import numpy as np
 import sympy as sy
+import scipy.signal as sig
 
 from fractions import Fraction
 from IPython.display import HTML, display
@@ -114,3 +115,24 @@ def zplane(b,a,filename=None):
     
 
     return z, p, k
+
+
+def partial_fraction(b, a):
+    residues, poles, coef = sig.residuez(b, a)
+    print('Coefficients: '+ format_vector(coef))
+    print('Residues:     '+ format_vector(residues))
+    print('Poles:        '+ format_vector(poles))
+    html = '$$'
+    has_coef = coef[0] != 0.0
+    if has_coef:
+        html += str(coef[0])
+    
+    for i in range(len(poles)):
+        if has_coef or i != 0:
+            html += ' + '
+        pole = str(poles[i])
+        residue = str(residues[i])
+        html += '\\frac{' + str(residue) +   '}{ 1 - ' + str(pole)  + ' z^{-1}}'
+    html += '$$'
+    return HTML(html)
+
